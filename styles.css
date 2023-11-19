@@ -1,6 +1,9 @@
-h1,#buttonarea,#results {
+#title,#subtitle,#buttonarea,#results {
     display: flex;
     justify-content: center;
+}
+#subtitle {
+    font-size: 20px;
 }
 #start {
     width: 200px;
