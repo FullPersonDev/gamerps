@@ -1,0 +1,19 @@
+h1,#buttonarea,#results {
+    display: flex;
+    justify-content: center;
+}
+#start {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-size: 25px;
+}
+#start:hover {
+    background-color: red;
+    box-shadow: 0 0 10px gray;
+}
+#start:active {
+    background-color: darkred;
+    box-shadow: 0 0 10px gray;
+}
