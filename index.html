@@ -7,9 +7,28 @@
     <h1 id="title">Let's Play a Game!</h1>
     <p id="subtitle">Rock, Paper, Scicors</p>
     <div id="buttonarea">
-        <button id="Start">Start</button>
+        <button id="start">Start</button>
     </div>
-    <div id="results"></div>
+    <div id="results">
+        <table>
+            <tr>
+                <th>Result</th>
+                <th class="count">Count</th>
+            </tr>
+            <tr>
+                <td>Wins</td>
+                <td id="winscount" class="count"></td>
+            </tr>
+            <tr>
+                <td>Ties</td>
+                <td id="tiescount" class="count"></td>
+            </tr>
+            <tr>
+                <td>Losses</td>
+                <td id="lossescount" class="count"></td>
+            </tr>
+        </table>
+    </div>
 
     <script src="./script.js"></script>
 </body>

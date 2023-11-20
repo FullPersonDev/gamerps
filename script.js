@@ -1,8 +1,9 @@
-var startButton = document.getElementById('Start');
+var startButton = document.getElementById('start');
+var results = document.getElementById('results');
 
 var wins = 0;
 var ties = 0;
-var loses = 0;
+var losses = 0;
 
 //sets up the array of options
 var options = ['ROCK','PAPER','SCICORS'];
@@ -14,7 +15,7 @@ var playGame = function() {
     if (!userChoice) {
         return;
     }
-    //converts userchoice to upplercase
+    //converts userchoice to upplercase to make it easier to compare
     userChoice = userChoice.toUpperCase();
 
     //get random index from options array
@@ -28,7 +29,7 @@ var playGame = function() {
         ties++;
         alert("It's a tie!");
         
-        //check win or loose condition for player
+    //check win or loose condition for player
     } else if (
         (userChoice === "ROCK" && computerChoice === "SCICORS") ||
         (userChoice === "PAPER" && computerChoice === "ROCK") ||
@@ -36,7 +37,7 @@ var playGame = function() {
         wins++;
         alert("You win!");
     } else {
-        loses++;
+        losses++;
         alert("You loose!");
     }
     

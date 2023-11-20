@@ -20,3 +20,10 @@
     background-color: darkred;
     box-shadow: 0 0 10px gray;
 }
+#results {
+    margin-top: 50px;
+}
+.count {
+    width: 70px;
+    text-align: end;
+}
