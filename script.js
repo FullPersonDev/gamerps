@@ -5,12 +5,19 @@ var wins = 0;
 var ties = 0;
 var losses = 0;
 
+//this function updates the webpage's results table accordingly
+function updateResultsTable() {
+    document.getElementById('winscount').textContent = wins;
+    document.getElementById('tiescount').textContent = ties;
+    document.getElementById('lossescount').textContent = losses;
+}
+
 //sets up the array of options
-var options = ['ROCK','PAPER','SCICORS'];
+var options = ['ROCK','PAPER','SCISSORS'];
 
 var playGame = function() {
     //asks user for their choice
-    var userChoice = prompt('Enter rock, paper, or scicors:');
+    var userChoice = prompt('Enter rock, paper, or scissors:');
     //if user clicks cancel, immidiately end game
     if (!userChoice) {
         return;
@@ -31,22 +38,18 @@ var playGame = function() {
         
     //check win or loose condition for player
     } else if (
-        (userChoice === "ROCK" && computerChoice === "SCICORS") ||
+        (userChoice === "ROCK" && computerChoice === "SCISSORS") ||
         (userChoice === "PAPER" && computerChoice === "ROCK") ||
-        (userChoice === "SCICORS" && computerChoice === "PAPER")) {
+        (userChoice === "SCISSORS" && computerChoice === "PAPER")) {
         wins++;
         alert("You win!");
     } else {
         losses++;
         alert("You loose!");
     }
-    
-    //ask if user wants to play again
-    var playAgain = confirm("Play Again?");
-    //run game again if payer confirms
-    if (playAgain) {
-        playGame();
-    }
+
+    //runs the update results table function after each round
+    updateResultsTable();
 };
 
 startButton.addEventListener('click', playGame);
