@@ -4,6 +4,8 @@ let results = document.getElementById('results');
 let gameArea = document.getElementById('gameArea');
 let userPickDiv = document.getElementById('userPick');
 let computerPickDiv = document.getElementById('computerPick');
+let userOptionsDiv = document.getElementById('userOptions');
+let userSelectedDiv = document.getElementById('userSelected');
 let feedbackDiv = document.getElementById('feedback');
 let winsCountTd = document.getElementById('winscount');
 let tiesCountTd = document.getElementById('tiescount');
@@ -37,22 +39,20 @@ startButton.addEventListener('click', () => {
     startGame();
 });
 //Event listener on userPickDiv
-userPickDiv.addEventListener('click', (event) => {
+userOptionsDiv.addEventListener('click', (event) => {
     if (event.target.tagName === 'IMG') {
         //Set user's pick
         let userPick = document.createElement('img');
         userPick.setAttribute('src', event.target.src);
         //Clear the userPickDiv
-        userPickDiv.textContent = '';
+        userOptionsDiv.textContent = '';
         //Append selected image to the dedicated div
-        userPickDiv.appendChild(userPick);
+        userSelectedDiv.appendChild(userPick);
     
         //Set computer's pick
         let randomCompPick = optionsRPS[Math.floor(Math.random() * optionsRPS.length)];
         computerPickDiv.appendChild(randomCompPick);
-    
-        console.log(userPick);
-        console.log(randomCompPick);
+
         //Check who if win, tie, or loss
         if (userPick.src === randomCompPick.src) {
             ties++;
@@ -75,9 +75,10 @@ userPickDiv.addEventListener('click', (event) => {
 //Function to start game
 function startGame() {
     //Clears out game area
-    userPickDiv.textContent = '';
+    userOptionsDiv.textContent = '';
+    userSelectedDiv.textContent = '';
     computerPickDiv.textContent = '';
     feedbackDiv.textContent = '';
     //Append images to userPickDiv
-    userPickDiv.append(rockImg, paperImg, scissorsImg);
+    userOptionsDiv.append(rockImg, paperImg, scissorsImg);
 };
