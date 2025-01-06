@@ -6,6 +6,7 @@ let userPickDiv = document.getElementById('userPick');
 let computerPickDiv = document.getElementById('computerPick');
 let userOptionsDiv = document.getElementById('userOptions');
 let userSelectedDiv = document.getElementById('userSelected');
+let headersGameAreaDiv = document.getElementById('headersGameArea');
 let feedbackDiv = document.getElementById('feedback');
 let winsCountTd = document.getElementById('winscount');
 let tiesCountTd = document.getElementById('tiescount');
@@ -75,10 +76,19 @@ userOptionsDiv.addEventListener('click', (event) => {
 //Function to start game
 function startGame() {
     //Clears out game area
+    headersGameAreaDiv.textContent = '';
     userOptionsDiv.textContent = '';
     userSelectedDiv.textContent = '';
     computerPickDiv.textContent = '';
     feedbackDiv.textContent = '';
+    //Create Headers for Game Area
+    let h3User = document.createElement('h3');
+    let h3Comp = document.createElement('h3');
+    h3User.textContent = 'Your Pick:';
+    h3Comp.textContent = 'Computer Picks:';
+    h3Comp.setAttribute('id', 'computerHeader');
+    //Append headers to headersGameAreaDiv
+    headersGameAreaDiv.append(h3User, h3Comp);
     //Append images to userPickDiv
     userOptionsDiv.append(rockImg, paperImg, scissorsImg);
 };

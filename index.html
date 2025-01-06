@@ -4,43 +4,52 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
 <body>
-    <h1 id="title">Let's Play</h1>
-    <h2 id="subtitle">Rock, Paper, Scissors!</h2>
-    <div id="buttonarea">
-        <button id="start">Play</button>
-    </div>
-    <div id="gameArea">
-        <div id="userPickContainer">
-            <div id="userOptions"></div>
-            <div id="userSelected"></div>
+    <header>
+        <h1 id="title">Let's Play</h1>
+        <h2 id="subtitle">Rock, Paper, Scissors!</h2>
+        <div id="buttonarea">
+            <button id="start">Play</button>
         </div>
-        <div id="computerPick">
+    </header>
 
+    <main>
+        <div id="headersGameArea">
         </div>
-    </div>
-    <div id="feedback">
-
-    </div>
-    <div id="results">
-        <table>
-            <tr>
-                <th>Results</th>
-                <th class="count">Count</th>
-            </tr>
-            <tr>
-                <td>Wins</td>
-                <td id="winscount" class="count">0</td>
-            </tr>
-            <tr>
-                <td>Ties</td>
-                <td id="tiescount" class="count">0</td>
-            </tr>
-            <tr>
-                <td>Losses</td>
-                <td id="lossescount" class="count">0</td>
-            </tr>
-        </table>
-    </div>
+    
+        <div id="gameArea">
+            <div id="userPickContainer">
+                <div id="userOptions"></div>
+                <div id="userSelected"></div>
+            </div>
+            <div id="computerPick">
+            </div>
+        </div>
+    
+        <div id="feedback">
+    
+        </div>
+    
+        <div id="results">
+            <table>
+                <tr>
+                    <th>Results</th>
+                    <th class="count"></th>
+                </tr>
+                <tr>
+                    <td>Wins:</td>
+                    <td id="winscount" class="count">0</td>
+                </tr>
+                <tr>
+                    <td>Ties:</td>
+                    <td id="tiescount" class="count">0</td>
+                </tr>
+                <tr>
+                    <td>Losses:</td>
+                    <td id="lossescount" class="count">0</td>
+                </tr>
+            </table>
+        </div>
+    </main>
 
     <script src="./assets/script/script.js"></script>
 </body>
