@@ -1,19 +1,46 @@
-#title,#subtitle,#buttonarea,#results {
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+body{
+    background-color: rgb(218, 217, 216);
+}
+#title,#subtitle,#buttonarea,#feedback,#results {
     display: flex;
     justify-content: center;
 }
+#gameArea {
+    display: flex;
+    justify-content: space-evenly;
+}
+#feedback {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#title {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 #subtitle {
     font-size: 20px;
+    margin-bottom: 15px;
 }
 #start {
-    width: 200px;
-    height: 100px;
-    background-color: blue;
+    width: 150px;
+    height: 75px;
+    background-color: rgb(132, 204, 228);
     color: white;
     font-size: 25px;
+    border-radius: 25px;
+    border: none;
+    margin: 15px;
 }
 #start:hover {
-    background-color: red;
+    background-color: rgb(202, 78, 78);
     box-shadow: 0 0 10px gray;
 }
 #start:active {
@@ -26,4 +53,7 @@
 .count {
     width: 70px;
     text-align: end;
+}
+img {
+    height: 180px;
 }
